@@ -9,10 +9,6 @@ public class DTOMapper {
     // it takes a whole report object and returns a WeatherTodayDTO object
     public static WeatherTodayDTO from(WholeReport wholeReport) {
 
-        // Weather array always has at least 1 element
-        String weatherMain = wholeReport.getWeather().getFirst().getMain();
-        String weatherDescription = wholeReport.getWeather().getFirst().getDescription();
-
         return new WeatherTodayDTO(
                 wholeReport.getName(),                 // city
                 wholeReport.getSys().getCountry(),     // ISO country
@@ -23,8 +19,8 @@ public class DTOMapper {
                 wholeReport.getMain().getHumidity(),// humidity
                 wholeReport.getSys().getSunrise(),
                 wholeReport.getSys().getSunset(),
-                weatherMain,                           // weather main
-                weatherDescription// weather description
+                wholeReport.getWeather().getFirst().getMain(),                           // weather main
+                wholeReport.getWeather().getFirst().getDescription()// weather description
 
         );
     }

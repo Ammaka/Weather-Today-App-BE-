@@ -19,7 +19,7 @@ public class Sys {
     }
 
     public String getSunset() {
-        return "the sun sets at: "+Instant.ofEpochSecond(sunset).atZone(zone).format(format);
+        return Instant.ofEpochSecond(sunset).atZone(zone).format(format);
     }
 
     public void setSunrise(int sunrise) {
@@ -27,13 +27,13 @@ public class Sys {
     }
 
     public String getSunrise() {
-        return "the sun rises at: "+Instant.ofEpochSecond(sunrise).atZone(zone).format(format);
+        return Instant.ofEpochSecond(sunrise).atZone(zone).format(format);
     }
 
 
 
     public String getCountry() {
-        return "Country: "+country;
+        return country;
     }
 
     public void setCountry(String country) {

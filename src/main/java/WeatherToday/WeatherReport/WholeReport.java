@@ -13,7 +13,7 @@ public class WholeReport {
     private String name;
 
     public String getName() {
-        return "City:"+ name;
+        return name;
     }
 
     public void setName(String name) {
