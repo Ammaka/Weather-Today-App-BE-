@@ -1,13 +1,11 @@
 package WeatherToday;
 import WeatherToday.Services.ApiService;
-import WeatherToday.WeatherReport.Weather;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URLEncoder;
 
 import WeatherToday.WeatherReport.WholeReport;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Scanner;
 
 import static WeatherToday.Services.CountryIsoConverter.countryCaseConverter;
